@@ -32,6 +32,11 @@ export default function TextForm(props) {
         text.select()
         navigator.clipboard.writeText(text.value);
     }
+    const handleExtraSpaces = (e) => {
+        e.preventDefault()
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "))
+    }
 
     const [text, setText] = useState('');
     // setText("sadakdas");
@@ -47,6 +52,7 @@ export default function TextForm(props) {
                     <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
                     <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear</button>
                     <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy</button>
+                    <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Spaces</button>
                 </form>
             </div>
             <div className="container my-2">
