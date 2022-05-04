@@ -27,6 +27,16 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor='grey';
       showAlert("Dark Mode has been enabled", "success");
+      // to change title dyamically 
+      // document.title = 'Learning ReactJs';
+      // //  To blink title with what u wnat
+      // setInterval(() => {
+      //   document.title = 'It is amazing'
+      // }, 2000);
+      // setInterval(() => {
+      //   document.title = 'It is really nice to learn'
+      // }, 1500);
+      // // blink up to here
     }
     else{
       setMode('light');
